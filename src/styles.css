@@ -1,0 +1,96 @@
+/* reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body, html, #root { height: 100%; font-family: Arial, Helvetica, sans-serif; }
+
+/* layout */
+.app { display: flex; min-height: 100vh; }
+.sidebar {
+  width: 220px;
+  background: #6f2bb6; /* purple */
+  color: #fff;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.brand { font-weight: 700; font-size: 22px; margin-bottom: 30px; }
+.nav { display: flex; flex-direction: column; gap: 18px; margin-top: 20px; }
+.nav-link { color: #fff; text-decoration: none; opacity: .95; padding: 6px 0; }
+.nav-link:hover, .nav-link.active { text-decoration: underline; }
+.time-card { background: #fff; color: #333; padding: 14px; border-radius: 6px; text-align: center; margin-top: 20px; }
+
+/* main area */
+.main-area { flex: 1; display: flex; flex-direction: column; }
+.header {
+  height: 60px;
+  background: linear-gradient(90deg,#5a24b7,#3f51b5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  justify-content: space-between;
+}
+.header .welcome { font-size: 18px; }
+.header .date { font-size: 14px; opacity: .95; }
+.logout-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* page content */
+.page-content { padding: 24px; background: #f4f5f6; min-height: calc(100vh - 60px); }
+
+/* Login */
+.login-page {
+  display:flex;
+  height:100vh;
+  align-items:center;
+  justify-content:center;
+  background: #f6eefe;
+}
+.login-card {
+  width: 420px;
+  background:white;
+  border-radius:8px;
+  padding:30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  text-align:center;
+}
+.login-card h2 { color:#6f2bb6; margin-bottom:20px; }
+.login-card label { display:block; text-align:left; margin:8px 0 6px; font-weight:600; }
+.login-card input { width:100%; padding:10px 12px; margin-bottom:10px; border-radius:6px; border:1px solid #e2e2e2; }
+.login-btn { background:#a855f7; color:#fff; border:none; padding:10px; width:100%; border-radius:6px; cursor:pointer; margin-top:8px; }
+
+/* dashboard hero */
+.card-area .hero {
+  background: #fff;
+  padding: 36px;
+  border-radius: 4px;
+  text-align: center;
+}
+.hero img { width: 600px; border-radius: 3px; margin-bottom: 10px; }
+.hero h1 { color:#6f2bb6; font-size:28px; margin-bottom:8px; }
+.hero p { color:#666; }
+
+/* manage students table */
+.manage h2 { margin-bottom: 16px; color: #222; }
+.table-wrap { background:#fff; padding:16px; border-radius:4px; box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
+.student-table { width:100%; border-collapse: collapse; }
+.student-table thead th { text-align:left; padding:12px; background:#efefef; }
+.student-table tbody td { padding:12px; border-top:1px solid #eee; }
+.action { margin-right:8px; padding:6px 10px; border-radius:4px; border:none; cursor:pointer; }
+.action.edit { background:#6f2bb6; color:#fff; }
+.action.del { background:#f44336; color:#fff; }
+
+/* add/edit form */
+.student-form { background:#fff; padding:20px; border-radius:4px; width:650px; }
+.student-form input { width:100%; padding:12px; margin-bottom:12px; border-radius:6px; border:1px solid #e6e6e6; }
+button.primary { background:#6f2bb6; color:#fff; padding:10px 16px; border-radius:6px; border:none; cursor:pointer; }
+
+/* small helpers */
+.error { color: #c00; margin-top: 8px; text-align:left; }
